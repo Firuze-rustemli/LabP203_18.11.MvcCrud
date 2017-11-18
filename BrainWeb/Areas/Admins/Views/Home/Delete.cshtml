@@ -1,0 +1,14 @@
+﻿@using BrainWeb.Models;
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+@using (Html.BeginForm("Delete", "Home"))
+{
+    <input type="submit" value="Delete"/>
+}
+
+@Html.ActionLink("Back to List", "Index");

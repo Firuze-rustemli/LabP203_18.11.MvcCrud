@@ -1,0 +1,29 @@
+﻿@using BrainWeb.Models;
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<table style="width:100%">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>Age</th>
+        <th>Gender</th>
+    </tr>
+    @foreach (Employer item in ViewBag.employe) {
+    <tr>
+        <td>@item.id</td>
+        <td>@item.name</td>
+        <td>@item.surname</td>
+        <td>@item.age</td>
+        <td>@item.gender</td>
+        <td>@Html.ActionLink("Update", "Update", new {id=item.id},null);</td>
+        <td>@Html.ActionLink("Delete", "Delete", new { id = item.id}, null);</td>
+    </tr>
+    }
+    @Html.ActionLink("Add", "Insert");
+</table>

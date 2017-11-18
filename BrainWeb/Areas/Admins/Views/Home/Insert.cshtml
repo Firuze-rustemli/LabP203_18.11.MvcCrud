@@ -1,0 +1,18 @@
+﻿@using BrainWeb.Models;
+
+@{
+    ViewBag.Title = "Insert";
+}
+
+<h2>Insert</h2>
+
+@using (Html.BeginForm("Insert", "Home"))
+{
+    <input type="text" placeholder="name" name="name"/>
+    <input type="text" placeholder="surname" name="surname" />
+    <input type="text" placeholder="age" name="age" />
+    <input type="text" placeholder="gender" name="gender" />
+    <input type="submit" value="Add" />
+}
+
+@Html.ActionLink("Index", "Home"); 
